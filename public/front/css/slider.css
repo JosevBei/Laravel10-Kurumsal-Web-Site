@@ -1,0 +1,313 @@
+/* Reset. */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Panels. */
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+    .panel .content {
+        position: absolute;
+        width: 100vw;
+        min-height: 45vw;
+        color: #FFF;
+    }
+
+    .panel .description {
+        width: 45%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .bottom .description {
+        width: 45%;
+        position: absolute;
+        top: 50%;
+        left: 1100px;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bottom img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+    }
+
+
+.bottom {
+    background: linear-gradient(45deg, #c80707, #6c010d, #4e0101 );
+    z-index: 1;
+}
+
+
+.top {
+    background: linear-gradient(45deg, #4e0101, #6c010d, #c80707 );
+    z-index: 2;
+    width: 50vw;
+
+    /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+    .top .description {
+        left: 5%;
+    }
+
+/* Handle. */
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+
+/*1500PX*/
+@media (max-width: 1500px) {
+    .top img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 55%;
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bottom img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 55%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top .description {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        font-size: 16px;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .bottom .description {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        font-size: 16px;
+
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .bottom h1{
+        font-size: 35px;
+    }
+
+    .top h1{
+        font-size: 35px;
+    }
+}
+
+/*1200PX*/
+@media (max-width: 1200px) {
+    .top img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bottom img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top .description {
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .bottom .description {
+        width: 45%;
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .bottom h1{
+        font-size: 28px;
+    }
+
+    .top h1{
+        font-size: 28px;
+    }
+}
+
+/*991PX*/
+@media (max-width: 991px) {
+    .top img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bottom img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top .description {
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .bottom .description {
+        width: 45%;
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .bottom h1{
+        font-size: 28px;
+    }
+
+    .top h1{
+        font-size: 28px;
+    }
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+}
+
+/*520PX*/
+@media (max-width: 590px) {
+    .top img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bottom img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .top .description {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        font-size: 9px;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .bottom .description {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        font-size: 9px;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .bottom h1{
+        font-size: 18px;
+    }
+
+    .top h1{
+        font-size: 18px;
+    }
+}
+

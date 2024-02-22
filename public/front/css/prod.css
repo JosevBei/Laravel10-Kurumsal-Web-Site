@@ -1,0 +1,144 @@
+/* Genel stiller */
+.splide {
+    max-width: 100%;
+}
+
+.splide__slide {
+  text-align: center;
+  padding: 20px;
+  width: 33.33%;
+  position: relative;
+}
+
+.splide__slide.is-active .product-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.product-details {
+  width: 80%;
+  background: #4e0101c8;
+  padding: 10px 25px;
+  border: 5px solid white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  opacity: 0; /* Başlangıçta görünmez olsun */
+  visibility: hidden; /* Başlangıçta görünmez olsun */
+  transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out; /* Geçiş efekti ekle */
+}
+
+
+.product-details h3,
+.product-details p,
+.product-details span {
+  margin: 0;
+}
+
+.product-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-details p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-details span {
+  font-size: 12px;
+}
+
+
+.splide__slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Ekran boyutlarına göre düzenleme */
+@media only screen and (max-width: 720px) {
+  .splide__slide {
+      width: 100%; /* Küçük ekranlarda tek sıra halinde görünecek */
+  }
+}
+
+@media only screen and (min-width: 721px) and (max-width: 1200px) {
+  .splide__slide {
+      width: 50%; /* Ekran boyutlarına bağlı olarak 2 sıra halinde görünecek */
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .splide__slide {
+      width: 33.33%; /* Ekran boyutlarına bağlı olarak 3 sıra halinde görünecek */
+  }
+}
+
+
+/* Genel stiller */
+.splide {
+    padding: 20px 0;
+  }
+  
+  /* Generic Slide */
+  .splide__slide img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 400ms;
+    transform: scale(.9);
+    transform-origin: center center;
+  }
+  
+  /* Active Slide */
+  .splide__slide.is-active img {
+    transform: scale(1.1);
+
+  }
+  
+  /* Arrow Tweaks for Accessibility */
+  .splide .splide__arrow {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transform: none;
+    border-radius: unset;
+    width: 50px;
+    opacity: .9;
+
+  }
+  
+  .splide .splide__arrow svg {
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+    
+  }
+  
+  .splide__arrow.splide__arrow--prev {
+    left: 0;
+    background: transparent;
+  }
+  
+  .splide__arrow.splide__arrow--next {
+    right: 0;
+    background: transparent;
+  }
+  
+
+
+  .splide svg{
+    background: #48fef8;
+    padding: 2px;
+    border-radius: 100%;
+  }
+  .splide svg path{
+    background: #630404;
+    padding: 100px;
+  }

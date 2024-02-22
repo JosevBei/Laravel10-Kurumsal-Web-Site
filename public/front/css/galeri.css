@@ -1,0 +1,74 @@
+/* Galeri Stili */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    flex: 0 1 calc(33.333% - 20px); /* 3 sütunlu grid düzeni */
+    max-width: calc(33.333% - 20px);
+    margin-top: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .gallery-item img {
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(85%); /* Siyah-beyaz görünüm */
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  .gallery-item:hover img {
+    filter: grayscale(0%); /* Renkli görünüm */
+  }
+  
+  
+  .gallery-item:hover::before {
+    opacity: 1;
+  }
+  
+  /* Lightbox Stili */
+  .lb-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .lb-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .lb-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .allbtn{
+    width: 100%;
+    color: white;
+    background-color: #860000;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 0px;
+    margin-top: 10px;
+    transition: 0.5s;
+
+  }
+
+  .allbtn:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #c80707;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 0px;
+    transition: 0.5s;
+  }
